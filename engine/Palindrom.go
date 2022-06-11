@@ -4,11 +4,11 @@ import (
 	"strings"
 )
 
-type Polindrom struct {
+type Palindrom struct {
 	word string
 }
 
-func (po *Polindrom) Execute(h Handler) {
+func (po *Palindrom) Execute(h Handler) {
 	res := make([]string, 0)
 	i := len(po.word) - 1
 	str := strings.Split(po.word, "")
@@ -21,8 +21,8 @@ func (po *Polindrom) Execute(h Handler) {
 	h.Post(NewPrintCommand(output))
 }
 
-func NewPolindrom(str string) *Polindrom {
-	return &Polindrom{
+func NewPolindrom(str string) *Palindrom {
+	return &Palindrom{
 		word: str,
 	}
 }

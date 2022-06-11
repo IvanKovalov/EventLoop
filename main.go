@@ -40,8 +40,8 @@ func Parser(str string) engine.Command {
 	if strings.Contains(str, "print") {
 		text := strings.Split(str, "print ")
 		return engine.NewPrintCommand(string(text[1]))
-	} else if strings.Contains(str, "polindrom") {
-		text := strings.Split(str, "polindrom ")
+	} else if strings.Contains(str, "palindrom") {
+		text := strings.Split(str, "palindrom ")
 		return engine.NewPolindrom(string(text[1]))
 	}
 
